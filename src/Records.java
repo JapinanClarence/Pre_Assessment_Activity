@@ -1,11 +1,11 @@
 public class Records extends Employee {
     /*
-     * Class params
+     * Class attribute
      */
     private String code;
     private String componentName;
     private String peripheral;
-    // private boolean value;
+ 
     
     /*
      * Constructors
@@ -13,11 +13,7 @@ public class Records extends Employee {
     public Records(){
         
     }
-    public Records(String code, String componentName, String peripheral) {
-        this.code = code;
-        this.componentName = componentName;
-        this.peripheral = peripheral;
-    }
+
 
     public Records(String code, String componentName, String peripheral, String employeeName) {
         super(employeeName);

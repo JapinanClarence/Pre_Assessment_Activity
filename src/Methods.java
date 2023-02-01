@@ -6,10 +6,11 @@ import java.util.Scanner;
 public class Methods {
 
     /*
-     * Class params
+     * Class attributes
      */
     private final ArrayList<Records> record = new ArrayList<>();
-
+    
+    //used for auto increminting our code
     private int id = 0001;
 
     /**
@@ -30,9 +31,11 @@ public class Methods {
         int currentDate = Year.now().getValue();
 
         String code = currentDate + String.format("%04d", id);
+
         Records recordObject = new Records(code, componentName, peripheral, employeeName);
         record.add(recordObject);
-
+        
+        
         if (recordObject.getEmployeeName().equals("n/a")) {
             System.out.println("*-----Record is added!-----*");
             System.out.println("Code: " + recordObject.getCode());
@@ -342,7 +345,7 @@ public class Methods {
                         }
                         System.out.println("Total input devices: " + total);
                     }
-                    // display all employees with records assigned to them
+                    // display total employees with records assigned to it
                     case 'e' -> {
 
                         int count = 0;

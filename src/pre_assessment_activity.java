@@ -45,13 +45,17 @@ public class pre_assessment_activity {
                         char option = scan.next().charAt(0);
 
                         String peripheral;
-                        if (option == 'a') {
+                    switch (option) {
+                        case 'a':
                             peripheral = "Input Device";
-                        } else if (option == 'b') {
+                            break;
+                        case 'b':
                             peripheral = "Output Device";
-                        } else {
+                            break;
+                        default:
                             peripheral = "Input/Output Device";
-                        }
+                            break;
+                    }
                         // enter employee
                         System.out.print("Enter employee name(n/a if none): ");
                         String employeeName = scan.next();
